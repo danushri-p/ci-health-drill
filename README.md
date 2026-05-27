@@ -1,4 +1,1 @@
-# ci-health-drill
-
-Payment platform CI pipeline.
-
+# ci-health-drill-solution
