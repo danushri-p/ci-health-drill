@@ -7,7 +7,7 @@ on:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    if: false    # Disabled — see commit a4f9e2c "temp: disable scan until fixed"
+    if: false    # Disabled — still broken, will fix in v1.1 "temp: disable scan until fixed"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
