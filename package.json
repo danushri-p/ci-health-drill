@@ -1,6 +1,6 @@
 {
   "name": "ci-health-drill",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Payment platform CI pipeline — assignment repository for LU 2.11",
   "main": "src/payments/processPayment.js",
   "scripts": {
