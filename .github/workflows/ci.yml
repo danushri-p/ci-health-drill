@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: ['*']
+  pull_request:
+    branches: [main]
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '16'    # Problem: outdated Node version (Node 16 is EOL)
+      - run: npm install        # Problem: should be npm ci for reproducible installs
+
+  test:
+    runs-on: ubuntu-latest
+    # Problem: missing `needs: install` — runs in parallel on a fresh machine
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm test           # Problem: no `npm ci` before test, node_modules missing

@@ -1,0 +1,25 @@
+{
+  "name": "ci-health-drill",
+  "version": "1.0.0",
+  "description": "Payment platform CI pipeline — assignment repository for LU 2.11",
+  "main": "src/payments/processPayment.js",
+  "scripts": {
+    "test": "jest --forceExit",
+    "test:coverage": "jest --coverage --forceExit"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/*.test.js"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
