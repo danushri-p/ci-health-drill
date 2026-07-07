@@ -1,0 +1,65 @@
+# Workflow Observations
+
+## Observation 1
+
+Finding
+
+The install job consistently failed.
+
+Evidence
+
+Run #13 and Run #12 both failed with:
+
+"npm error Missing: lodash@4.18.1 from lock file"
+
+Impact
+
+Developers cannot execute the test stage because installation fails first.
+
+---
+
+## Observation 2
+
+Finding
+
+Security Scan workflow failed.
+
+Evidence
+
+Security Scan workflow failed in multiple runs.
+
+Impact
+
+Potential vulnerabilities may go undetected.
+
+---
+
+## Observation 3
+
+Finding
+
+The workflow stops before running tests whenever installation fails.
+
+Evidence
+
+The install job exited with code 1.
+
+Impact
+
+Test coverage is reduced because tests never execute.
+
+---
+
+## Observation 4
+
+Finding
+
+Node.js 20 deprecation warning appeared.
+
+Evidence
+
+"Node.js 20 is deprecated."
+
+Impact
+
+Future GitHub Actions runs may fail unless the workflow is updated.
